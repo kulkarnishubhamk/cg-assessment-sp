@@ -56,7 +56,7 @@ const saveExcel = (ListData: any) => {
 
     // create new workbook and worksheet
     const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.json_to_sheet([])
+    const ws : any = XLSX.utils.json_to_sheet([])
 
     XLSX.utils.sheet_add_aoa(ws, Headings, { origin: "A1" });
     XLSX.utils.sheet_add_json(ws, _ListData, {
