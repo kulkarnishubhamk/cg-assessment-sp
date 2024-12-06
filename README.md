@@ -1,73 +1,93 @@
-# assesment
 
-## Summary
 
-Short summary on functionality and used technologies.
+Prerequisites
 
-[picture of the solution in action, if possible]
+Before you begin, ensure the following tools are installed on your system:
 
-## Used SharePoint Framework Version
+1. Node.js
+   - Recommended version: v18.20.5
+   - Download: https://nodejs.org/
 
-![version](https://img.shields.io/badge/version-1.20.0-green.svg)
+2. Yeoman and Gulp CLI
+   Install globally if not already available:
+   npm install -g yo gulp
 
-## Applies to
+3. SharePoint Framework Yeoman Generator
+   Install globally:
+   npm install -g @microsoft/generator-sharepoint
 
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
+4. Code Editor
+   Install Visual Studio Code: https://code.visualstudio.com/
 
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
-
-## Prerequisites
-
-> Any special pre-requisites?
-
-## Solution
-
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
-
-## Version history
-
-| Version | Date             | Comments        |
-| ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
-
-## Disclaimer
-
-**THIS CODE IS PROVIDED _AS IS_ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+5. SharePoint Online Tenant
+   You need access to a SharePoint Online tenant for development purposes.
 
 ---
 
-## Minimal Path to Awesome
+Installation Steps
 
-- Clone this repository
-- Ensure that you are at the solution folder
-- in the command-line run:
-  - **npm install**
-  - **gulp serve**
+1. Clone the Repository
+   Clone this project to your local machine:
+   git clone https://github.com/kulkarnishubhamk/cg-assessment-sp.git
+   
 
-> Include any additional steps as needed.
+2. Install Dependencies
+   Navigate to the project directory and run:
+   npm install
+   gulp build
 
-## Features
+3. Set Up Dev Environment
+   Configure the serve.json file (located in the config folder) with your SharePoint site URL:
+   {
+     "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+     "port": 4321,
+     "https": true,
+     "initialPage": "https://<your-sharepoint-site>/_layouts/workbench.aspx"
+   }
 
-Description of the extension that expands upon high-level summary above.
+---
 
-This extension illustrates the following concepts:
+Running the Project Locally
 
-- topic 1
-- topic 2
-- topic 3
+1. Start the Local Server
+   Run the following command in your project directory:
+   gulp serve
 
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
+2. Access Workbench
+   - The default browser will open with the SharePoint Workbench.
+   - If it doesn’t open automatically, navigate to the following URL in your browser:
+     https://<your-sharepoint-site>/_layouts/workbench.aspx
 
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
+3. Test Your Web Part
+   - Add your web part to the workbench to preview and test functionality.
+   - Modify your code as needed, and Gulp will rebuild and refresh automatically.
 
-## References
+---
 
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+
+Common Issues and Troubleshooting
+
+1. Dependencies Not Installing
+   Delete the node_modules folder and try re-installing:
+   rm -rf node_modules package-lock.json
+   npm install
+
+2. Incorrect Node.js Version
+   Use nvm to switch to a compatible Node.js version:
+   nvm install 16
+   nvm use 16
+
+3. SharePoint Workbench Not Loading
+   - Ensure the serve.json file has the correct SharePoint site URL.
+   - Check network connectivity to the SharePoint tenant.
+
+---
+
+Project Deployment
+
+When ready to deploy your web part, bundle and package the solution:
+gulp bundle --ship
+gulp package-solution --ship
+
+Upload the .sppkg file from the sharepoint/solution folder to your App Catalog.
+
