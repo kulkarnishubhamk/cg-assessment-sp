@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "home-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/home/HomeWebPart.js",
+          "manifest": "./src/webparts/home/HomeWebPart.manifest.json"
+        }
+      ]
+    },
+    "navbar-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/navbar/NavbarWebPart.js",
+          "manifest": "./src/webparts/navbar/NavbarWebPart.manifest.json"
+        }
+      ]
+    },
+    "report-page-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/reportPage/ReportPageWebPart.js",
+          "manifest": "./src/webparts/reportPage/ReportPageWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HomeWebPartStrings": "lib/webparts/home/loc/{locale}.js",
+    "NavbarWebPartStrings": "lib/webparts/navbar/loc/{locale}.js",
+    "ReportPageWebPartStrings": "lib/webparts/reportPage/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

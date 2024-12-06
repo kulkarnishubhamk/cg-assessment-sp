@@ -1,0 +1,132 @@
+.searchInput{
+    background-color: #F1F6FD ;
+    color: "#0070AD";
+    font-size: "12px";
+    padding: "8px";
+    font-weight: "bold";
+    border: "1px solid #0070AD";
+    height: "30px";
+    border-radius: "15px";
+    cursor: pointer;
+}
+
+.cart-icon {
+    width: 50px;
+    height: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cart-icon:hover {
+    content: url('../assets/cart_Hover.png');
+    /* Change image on hover */
+}
+
+.noti-icon {
+    width: 50px;
+    height: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.noti-icon:hover {
+    content: url('../assets/Noti_Hover.png');
+    /* Change image on hover */
+}
+
+
+/* navbar.css */
+
+/* General navbar styles */
+.fixed-top {
+    background-color: #f1f6fd;
+  }
+  
+  /* Flex container for the navbar */
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+  
+  /* Left section: Logo */
+  .navbar-logo {
+    margin-left: 50px;
+  }
+  
+  /* Right section: Icons */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-icons-container {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+  }
+  
+  /* Search bar */
+  .search-group {
+    border-radius: 25px;
+    overflow: hidden;
+    margin-right: 20px;
+    height: 30px;
+  }
+  
+  .search-input {
+    z-index: 100;
+    border-radius: 25px;
+    padding-left: 30px;
+    background-image: url('../assets/Search.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    height: 30px;
+    border: 1px solid lightgray;
+  }
+  
+  /* Raise a ticket button */
+  .raise-ticket {
+    border-radius: 15px;
+    margin-right: 20px;
+    height: 30px;
+    color: #0070ad !important;
+    background-color: #f1f6fd;
+    font-size: 12px;
+    padding: 8px;
+    font-weight: bold;
+    border: 1px solid #0070ad;
+    cursor: pointer;
+  }
+  
+  /* Cart, Notification, and Profile icons */
+  .icon-container {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-img {
+    height: 30px;
+  }
+  
+  .profile-img {
+    height: 30px;
+    width: 50px;
+  }
+  
+  /* Navbar links */
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-link-item {
+    margin: 5px;
+    margin-left: 10px;
+  }
+  

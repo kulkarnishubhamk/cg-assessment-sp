@@ -1,0 +1,50 @@
+#SuiteNavWrapper {
+  display: none !important;
+  visibility: hidden;
+}
+
+div[id="sp-appBar"] {
+  display: none !important;
+  width: 0px !important;
+}
+
+div[id="spCommandBar"] {
+  display: none !important;
+  width: 0px !important;
+}
+
+div[id="CommentsWrapper"] {
+  display: none !important;
+  width: 0px !important;
+}
+
+div[id="vpc_Page.SiteFooter.internal.03025612-a400-4804-a78e-e1493200a43b"] {
+  display: none !important;
+  width: 0px !important;
+}
+
+div[data-automation-id="CanvasControl"] {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+div[data-automation-id="CanvasSection"] {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+div[data-automation-id="CanvasZone"] {
+  margin: 0px !important;
+  padding: 0px !important;
+  max-width: 100% !important;
+}
+
+div[data-automation-id="CanvasZone"] :first-child {
+  max-width: 100% !important;
+}
+
+div[data-automation-id="CanvasZone-SectionContainer"] {
+  background-color: #f4f6f9 !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
