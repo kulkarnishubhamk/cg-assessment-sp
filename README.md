@@ -21,6 +21,9 @@ Before you begin, ensure the following tools are installed on your system:
 
 5. SharePoint Online Tenant
    You need access to a SharePoint Online tenant for development purposes.
+   Create Sharepoint List "reportData" with columns : "Id", "Title", "Status", "Start Date", "End Date", "Budget", "Expenses", "Team".
+   Create Sharepoint List "newsFeed" with columns : "Title", "imgUrl", "isActive", "newsBy", "Date"
+
 
 ---
 
